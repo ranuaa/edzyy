@@ -2,9 +2,11 @@ import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import edzyLogo from '../assets/images/edzyLogo.png'
 import logoKecil from '../assets/images/logoKecil.png'
+import logoText from '../assets/images/logoText.png'
 
 // Import Swiper styles
 import 'swiper/css';
+import { Link } from 'react-router-dom';
 
 const SplashSlider = () => {
   return (
@@ -45,10 +47,40 @@ const SplashSlider = () => {
             <br />
             your screen
           </h1>
+
+          <div style={{ backgroundColor: '#F78E12', height: '51px', display: 'flex', alignItems: 'center', width: '90%' }} >
+            <h1 style={{ fontSize: '23px', textAlign: 'start', fontWeight: 'bold', marginLeft: '10px' }}  >PUBLIC TRANSPORTATION</h1>
+          </div>
+
+          <div style={{ backgroundColor: '#0476D9', height: '51px', display: 'flex', alignItems: 'center', width: '40%' }} >
+            <h1 style={{ fontSize: '23px', textAlign: 'start', fontWeight: 'bold', marginLeft: '10px' }}  >VACATION</h1>
+          </div>
+
+          <div style={{ backgroundColor: '#F24C05', height: '51px', display: 'flex', alignItems: 'center', width: '60%' }} >
+            <h1 style={{ fontSize: '23px', textAlign: 'start', fontWeight: 'bold', marginLeft: '10px', textTransform: 'uppercase' }}  >Hangout & Food</h1>
+          </div>
         </div>
       </SwiperSlide>
-      <SwiperSlide>Slide 4</SwiperSlide>
-      ...
+      <SwiperSlide>
+        <div>
+          <img src={logoText} alt=""
+            style={{
+              marginLeft: '50px',
+              marginTop: '30%'
+            }}
+          />
+          <div style={{ display: 'flex', flexDirection: 'column', marginTop: '80%', justifyContent: 'center', alignItems: 'center' }} >
+            <Link to='/register' >
+              <button style={{ marginTop: '10px', width: '215px', height: '40px', backgroundColor: '#F28705', borderRadius: '36px' }}> <span style={{ color: 'white' }} >REGISTER</span> </button>
+            </Link>
+
+            <Link to='/login' >
+              <button style={{ marginTop: '10px', width: '215px', height: '40px', backgroundColor: '#0455C0', borderRadius: '36px' }}> <span style={{ color: 'white' }} >Login</span> </button>
+            </Link>
+
+          </div>
+        </div>
+      </SwiperSlide>
     </Swiper >
   )
 }
