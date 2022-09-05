@@ -1,0 +1,9 @@
+.category__card {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.category__card>img {
+  width: 122px;
+  height: 122px;
+}

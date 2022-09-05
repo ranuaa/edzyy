@@ -1,0 +1,8 @@
+::placeholder {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  color: rgba(0, 0, 0, 0.28);
+  font-size: 18px;
+  opacity: 1;
+}
